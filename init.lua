@@ -30,12 +30,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 	underline = true,
 })
 
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-
 -- Recommended key bindings from
 -- https://github.com/neovim/nvim-lspconfig
 local opts = { noremap = true, silent = true }
@@ -79,3 +73,4 @@ require("configs/null-ls")
 require("configs/nvim-treesitter")
 require("configs/nvim-cmp")
 require("configs/nvim-tree")
+require("configs/telescope")
