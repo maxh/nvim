@@ -9,12 +9,6 @@ vim.cmd([[colorscheme kanagawa]])
 
 vim.keymap.set("n", "<Space>", "<Nop>", { silent = true, remap = false })
 vim.g.mapleader = " "
--- Set up lspconfig.
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require("lspconfig")["<YOUR_LSP_SERVER>"].setup({
-	capabilities = capabilities,
-})
 
 require("nvim-treesitter.configs").setup({
 	ensure_installed = { "typescript", "lua", "vim", "help" },
@@ -28,7 +22,10 @@ require("nvim-treesitter.configs").setup({
 
 require("mason").setup()
 require("mason-lspconfig").setup()
+
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require("lspconfig").tsserver.setup({
+	capabilities = capabilities,
 	server = {
 		init_options = {
 			preferences = {
