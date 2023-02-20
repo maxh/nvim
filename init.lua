@@ -26,27 +26,6 @@ require("lspconfig").tsserver.setup({
 	},
 })
 
-local null_ls = require("null-ls")
-null_ls.setup({
-	sources = {
-		null_ls.builtins.formatting.prettier,
-		null_ls.builtins.formatting.stylua,
-	},
-	-- Run formatter on save.
-	on_attach = function(client, bufnr)
-		if client.supports_method("textDocument/formatting") then
-			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				group = augroup,
-				buffer = bufnr,
-				callback = function()
-					vim.lsp.buf.format()
-				end,
-			})
-		end
-	end,
-})
-
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = true,
 })
@@ -96,6 +75,7 @@ end
 require("lspconfig")["tsserver"].setup({
 	on_attach = on_attach,
 })
+require("configs/null-ls")
 require("configs/nvim-treesitter")
 require("configs/nvim-cmp")
 require("configs/nvim-tree")
