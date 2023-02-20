@@ -1,5 +1,4 @@
 require("plugins")
-
 local set = vim.opt
 set.tabstop = 2
 set.softtabstop = 2
@@ -108,10 +107,6 @@ null_ls.setup({
 	end,
 })
 
-require("nvim-tree").setup({
-	view = { width = 60 },
-})
-
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = true,
 })
@@ -162,9 +157,4 @@ require("lspconfig")["tsserver"].setup({
 	on_attach = on_attach,
 })
 
-local api = require("nvim-tree.api")
-vim.keymap.set("n", "<leader>e", api.tree.toggle, { desc = "Toggle filetree" })
-vim.keymap.set("n", "<leader>tr", api.tree.reload, { desc = "Refresh tree" })
-vim.keymap.set("n", "<leader>tt", function()
-	api.tree.toggle(true)
-end, { desc = "Find current file in tree" })
+require("user/nvim-tree")
