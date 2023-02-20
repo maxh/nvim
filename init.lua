@@ -157,4 +157,4 @@ require("lspconfig")["tsserver"].setup({
 	on_attach = on_attach,
 })
 
-require("user/nvim-tree")
+require("configs/nvim-tree")
