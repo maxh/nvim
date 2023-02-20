@@ -10,16 +10,6 @@ vim.cmd([[colorscheme kanagawa]])
 vim.keymap.set("n", "<Space>", "<Nop>", { silent = true, remap = false })
 vim.g.mapleader = " "
 
-require("nvim-treesitter.configs").setup({
-	ensure_installed = { "typescript", "lua", "vim", "help" },
-	sync_install = false,
-	auto_install = true,
-	highlight = {
-		enable = true,
-		additional_vim_regex_highlighting = false,
-	},
-})
-
 require("mason").setup()
 require("mason-lspconfig").setup()
 
@@ -106,5 +96,6 @@ end
 require("lspconfig")["tsserver"].setup({
 	on_attach = on_attach,
 })
+require("configs/nvim-treesitter")
 require("configs/nvim-cmp")
 require("configs/nvim-tree")
