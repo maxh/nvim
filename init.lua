@@ -21,3 +21,6 @@ require("configs/nvim-treesitter")
 require("configs/nvim-cmp")
 require("configs/nvim-tree")
 require("configs/telescope")
+
+-- TODO
+-- https://github.com/joe-re/sql-language-server
