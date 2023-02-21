@@ -31,3 +31,5 @@ require("configs/telescope")
 
 -- TODO
 -- https://github.com/joe-re/sql-language-server
+-- Autocomplete class name based on file name
+-- Autoimport while typing so no need to run code action
