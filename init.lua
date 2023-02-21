@@ -33,3 +33,6 @@ require("configs/telescope")
 -- https://github.com/joe-re/sql-language-server
 -- Autocomplete class name based on file name
 -- Autoimport while typing so no need to run code action
+-- Avoid duplicate code actions in TS import prompt
+-- Proper indentation for new lines in TypeScript
+-- ESLint running in the background
