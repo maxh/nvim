@@ -36,3 +36,7 @@ require("configs/telescope")
 -- Avoid duplicate code actions in TS import prompt
 -- Proper indentation for new lines in TypeScript
 -- ESLint running in the background
+-- Indentation in JS doesn't use tabs
+-- Import full paths
+-- Brackets automatically inserted
+-- Search for hidden files in telescope
