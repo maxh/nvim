@@ -1,15 +1,15 @@
 require("plugins")
 
 local set = vim.opt
-set.tabstop = 2
-set.softtabstop = 2
-
-set.number = true
-
 set.background = "dark"
-vim.cmd([[colorscheme kanagawa]])
+set.colorcolumn = "80"
+set.expandtab = true -- Use spaces instead of tabs
+set.number = true
+set.shiftwidth = 2 -- Size of an indent
+set.softtabstop = 2
+set.tabstop = 2 -- Number of spaces tabs count for
 
-vim.opt.colorcolumn = "80"
+vim.cmd([[colorscheme kanagawa]])
 
 vim.keymap.set("n", "<Space>", "<Nop>", { silent = true, remap = false })
 vim.g.mapleader = " "
