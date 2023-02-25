@@ -21,6 +21,7 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true, remap = false })
 
 require("mason").setup()
 require("mason-lspconfig").setup()
+require("nvim-autopairs").setup()
 
 require("configs/lsp")
 require("configs/null-ls")
@@ -38,5 +39,4 @@ require("configs/telescope")
 -- ESLint running in the background
 -- Indentation in JS doesn't use tabs
 -- Import full paths
--- Brackets automatically inserted
 -- Search for hidden files in telescope
