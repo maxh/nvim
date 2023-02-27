@@ -6,6 +6,7 @@ set.colorcolumn = "80"
 set.expandtab = true -- Use spaces instead of tabs
 set.number = true -- Line numbers
 set.shiftwidth = 2 -- Size of an indent
+set.relativenumber = true
 set.softtabstop = 2
 set.tabstop = 2 -- Number of spaces tabs count for
 
@@ -35,8 +36,6 @@ require("configs/telescope")
 -- Autocomplete class name based on file name
 -- Autoimport while typing so no need to run code action
 -- Avoid duplicate code actions in TS import prompt
--- Proper indentation for new lines in TypeScript
 -- ESLint running in the background
--- Indentation in JS doesn't use tabs
 -- Import full paths
 -- Search for hidden files in telescope

@@ -5,7 +5,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 -- Recommended key bindings from
 -- https://github.com/neovim/nvim-lspconfig
 local opts = { noremap = true, silent = true }
-vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, opts)
+vim.keymap.set("n", "<space>go", vim.diagnostic.open_float, opts)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
@@ -42,12 +42,10 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require("lspconfig").tsserver.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	server = {
-		init_options = {
-			preferences = {
-				importModuleSpecifierPreference = "non-relative",
-				noUnusedParameters = false,
-			},
+	init_options = {
+		preferences = {
+			importModuleSpecifierPreference = "non-relative",
+			noUnusedParameters = false,
 		},
 	},
 })
