@@ -31,11 +31,19 @@ require("configs/nvim-cmp")
 require("configs/nvim-tree")
 require("configs/telescope")
 
--- TODO
+-- TO CONFIG
+-- LSP working with TSX
+-- https://github.com/nvim-telescope/telescope-smart-history.nvim
 -- https://github.com/joe-re/sql-language-server
 -- Autocomplete class name based on file name
 -- Autoimport while typing so no need to run code action
 -- Avoid duplicate code actions in TS import prompt
 -- ESLint running in the background
--- Import full paths
 -- Search for hidden files in telescope
+-- Copy current filename to clipboard https://stackoverflow.com/a/19727678
+-- Fix asterisks on ESLint docs
+-- Git blame for a given line
+
+-- TO LEARN
+-- Delete until next character
+-- Search within directory (from the tree on the left?)

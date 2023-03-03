@@ -14,6 +14,7 @@ local packer_bootstrap = ensure_packer()
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
+	use({ "f-person/git-blame.nvim" })
 	use({ "hrsh7th/cmp-nvim-lsp" })
 	use({ "hrsh7th/cmp-buffer" })
 	use({ "hrsh7th/nvim-cmp" })
