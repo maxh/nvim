@@ -1,3 +1,5 @@
+vim.lsp.set_log_level("debug")
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = true,
 })
@@ -41,6 +43,7 @@ end
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require("lspconfig").tsserver.setup({
 	on_attach = on_attach,
+	filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
 	capabilities = capabilities,
 	init_options = {
 		preferences = {
