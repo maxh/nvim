@@ -25,6 +25,9 @@ vim.keymap.set("v", "<leader>p", '"_dP')
 vim.keymap.set("v", "<leader>d", '"_d')
 vim.keymap.set("n", "<leader>d", '"_d')
 
+-- copy current file name to system clipboard
+vim.keymap.set("n", "<leader>mf", ":let @+=expand('%:p')<CR>", { silent = true })
+
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("nvim-autopairs").setup()
@@ -43,9 +46,12 @@ require("configs/telescope")
 -- Autoimport while typing so no need to run code action
 -- ESLint running in the background
 -- Search for hidden files in telescope
--- Copy current filename to clipboard https://stackoverflow.com/a/19727678
 -- Fix asterisks on ESLint docs
 -- Git blame for a given line
 
 -- TO LEARN
 -- Search within directory (from the tree on the left?)
+
+-- TO INSTALL FRESH
+-- LSPs
+-- tserver on system
