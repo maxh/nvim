@@ -20,6 +20,11 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", { silent = true, remap = false })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { silent = true, remap = false })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true, remap = false })
 
+-- delete and paste without changing register content
+vim.keymap.set("v", "<leader>p", '"_dP')
+vim.keymap.set("v", "<leader>d", '"_d')
+vim.keymap.set("n", "<leader>d", '"_d')
+
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("nvim-autopairs").setup()
