@@ -63,6 +63,7 @@ return require("packer").startup(function(use)
 
 	use({ "RRethy/vim-illuminate" })
 
+	use({ "ThePrimeagen/vim-be-good" })
 	use({ "tpope/vim-commentary" })
 
 	use({
