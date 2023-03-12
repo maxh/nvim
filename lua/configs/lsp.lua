@@ -40,15 +40,22 @@ local on_attach = function(client, bufnr)
 	end, bufopts)
 end
 
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local tsserver_capabilities = require("cmp_nvim_lsp").default_capabilities()
 require("lspconfig").tsserver.setup({
 	on_attach = on_attach,
 	filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-	capabilities = capabilities,
+	capabilities = tsserver_capabilities,
 	init_options = {
 		preferences = {
 			importModuleSpecifierPreference = "non-relative",
 			noUnusedParameters = false,
 		},
 	},
+})
+
+local clangd_capabilities = require("cmp_nvim_lsp").default_capabilities()
+clangd_capabilities.offsetEncoding = "utf-8"
+require("lspconfig").clangd.setup({
+	on_attach = on_attach,
+	capabilities = clangd_capabilities,
 })
